@@ -1,0 +1,97 @@
+@font-face {
+  font-family: Lastica;
+  src: url(FontsFree-Net-Lastica.ttf);
+}
+
+body {
+  background-image: url("./images/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+}
+
+.left-section {
+  width: 50%;
+}
+.logo {
+  margin-top: -2%;
+  margin-left: -5%;
+}
+
+.main-desc ul {
+  font-size: 35px;
+  font-family: "Fraunces", serif;
+  color: whitesmoke;
+  margin-left: 10%;
+  margin-top: -5%;
+}
+.desc {
+  font-family: "Lastica", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: inherit;
+  color: whitesmoke;
+  margin-top: -15%;
+  margin-left: 10%;
+  letter-spacing: 2px;
+}
+
+.right-section {
+  width: 50%;
+}
+
+.form {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: max-content;
+  margin-left: 15%;
+  margin-top: 30%;
+  font-family: "Fraunces", serif;
+  color: whitesmoke;
+}
+.form-name {
+  font-size: 45px;
+}
+hr {
+  color: white;
+}
+.form-data {
+  font-size: 25px;
+}
+input[type="text"] {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  width: 75%;
+  height: 32px;
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+button{
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  margin-left: 25%;
+  width: 50%;
+  height: 35px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 9px #999;
+  font-size: 25px;
+  font-family: "Fraunces", serif;
+  color: whitesmoke;
+}
+button:hover {background-color: #2a7ce0}
+
+button:active {
+  background-color: transparent;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

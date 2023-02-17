@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Lastica;
+  src: url(FontsFree-Net-Lastica.ttf);
+}
+
+body {
+  background-image: url("./images/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+}
+
+.logo {
+  margin-top: -5%;
+  margin-left: -5%;
+}
+
+.user {
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.profile {
+  font-family: "Fraunces", serif;
+
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: black;
+  height: max-content;
+  margin-top: 30px;
+  margin-left: 35%;
+}
+
+hr {
+  margin-top: -8%;
+  margin-left: 120px;
+}
+
+form {
+  padding: 20px;
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-family: "Fraunces", serif;
+}
+
+form hr {
+  margin: auto;
+  margin-left: 0px;
+  width: 32%;
+}
+
+.form-name {
+  font-size: 45px;
+  margin-top: -5%;
+}
+
+.form-data {
+  margin-top: 5%;
+  font-size: 30px;
+}
+
+textarea {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  margin-top: 25px;
+  width: 95%;
+  height: 95%;
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+#analysis {
+  display: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-family: "Fraunces", serif;
+  padding: 10px;
+  margin-left: 6%;
+  width: 80%;
+  height: min-content;
+}
+
+
+#analysis-question {
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+}
+
+#remark {
+  font-family: "Fraunces", serif;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: transparent;
+  width: 50%;
+  height: 25px;
+  margin-left: 10px;
+}
+
+form button {
+  margin-top: 10px;
+  margin-left: 86%;
+}
+button{
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  width: max-content;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 9px #999;
+  font-size: 25px;
+  font-family: "Fraunces", serif;
+  color: white;
+}
+
+button:hover {
+  background-color: #2a7ce0;
+}
+
+button:active {
+  background-color: transparent;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.analysis-button {
+  display: flex;
+  align-items: flex-start;
+  gap: 70%;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

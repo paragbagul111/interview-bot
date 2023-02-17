@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika&family=Fraunces:opsz,wght@9..144,200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Interview Bot</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./images/Logo.svg" />
+      </div>
+      <div class="profile">
+        <span id="profile"></span>
+      </div>
+      <div class="user">
+        <span id="name">Name : </span> <br />
+        <span id="profession">Profession : </span>
+      </div>
+    </div>
+    <hr />
+    <form action="" method="post" class="form">
+      <div class="form-name">Interview Questions</div>
+      <hr />
+      <div class="form-data">
+        <label for="question" id="question">Generating Questions</label><span id="loding"></span><br>
+        <textarea id="answer" cols="1" rows="8"></textarea>
+        <button type="submit" id="submit">Next</button>
+      </div>
+    </form>
+    <div id="analysis">
+        <h2>Analysis: </h2>
+          <label for="question" id="analysis-question"></label>
+        <h2 style="margin-left: 10px;">Remarks: </h2>
+        <textarea style="margin-left: 10px; margin-top: -1%;" id="remark" cols="1" rows="2" value=""></textarea>
+        <h2 style="margin-left: 10px;">Optimization: </h2>
+        <textarea style="margin-left: 10px; margin-top: -1%;" id="optimise" cols="1" rows="8" value=""></textarea>
+        <div class="analysis-button">
+          <button id="previous">Previous</button>
+          <button id="next">Next</button>
+        </div>
+    </div>
+    <br><br>
+    <div id="result"></div>
+    <script src="home.js"></script>
+    <!-- <script src="script.js"></script>   -->
+    </body>
+</html>
