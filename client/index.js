@@ -19,7 +19,7 @@ function validateAndNavigate() {
   if (validate()) {
     const namevalue = document.getElementById("name").value;
     const professionvalue = document.getElementById("profession").value;
-    window.location.href = "/home.html?" + namevalue + "|" + professionvalue;
+    window.location.href = "./client/home.html?" + namevalue + "|" + professionvalue;
   }
 }
 
