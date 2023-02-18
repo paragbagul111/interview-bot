@@ -46,7 +46,7 @@ function loader(element) {
 
 async function generateQue() {
   loader(loding);
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch("https://interview-bot.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -101,7 +101,7 @@ nextButton.addEventListener("click", (e) => {
 async function getRemarks() {
   for (let i = 0; i < questions.length; i++) {
     loader(loding);
-    const response = await fetch("http://localhost:5000", {
+    const response = await fetch("https://interview-bot.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -132,7 +132,7 @@ async function getRemarks() {
 async function getOptimise() {
   for (let i = 0; i < questions.length; i++) {
     loader(loding);
-    const response = await fetch("http://localhost:5000", {
+    const response = await fetch("https://interview-bot.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
