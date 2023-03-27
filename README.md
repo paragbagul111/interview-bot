@@ -15,7 +15,7 @@ If you find a bug while playing the game, please file an issue in the [issue tra
 
 ## Suggesting New Features
 
-If you have an idea for a new feature that you think would make the game more fun or more user-friendly, please file an issue in the [issue tracker](https://github.com/JayeshYadav99Endless-Running-Game---Beginner-Project/issues) with the following information:
+If you have an idea for a new feature that you think would make the game more fun or more user-friendly, please file an issue in the [ISSUE TRACKER](https://github.com/TechNodes2-0/Interview-Bot/issues) with the following information:
 - A clear and concise description of the feature
 - Why you think it would be a good addition to the Project
 - Screenshots or mockups (if applicable)
