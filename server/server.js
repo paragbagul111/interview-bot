@@ -1,15 +1,12 @@
 import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
-import { Configuration, OpenAIApi } from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { isCorrect,formatQuestions } from "./functions.js";
 
 dotenv.config();
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const app = express();
 app.use(cors());
@@ -22,26 +19,33 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  try {
-    const prompt = req.body.prompt;
-    const token = req.body.token;
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt:  `${prompt}`,
-      temperature: 0,
-      max_tokens: token,
-      top_p: 1,
-      frequency_penalty: 0.5,
-      presence_penalty: 0,
-    });
-      console.log(response);
-    res.status(200).send({
-      bot: response.data.choices[0].text,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(500).send({ error });
-  }
+  let questions = [];
+  // do{
+     try {
+       const prompt = req.body.prompt;
+       const token = req.body.token;
+       const generationConfig = {
+         maxOutputTokens: token,
+         temperature: 0,
+         topP: 0.1,
+         topK: 16,
+       };
+       const model = genAI.getGenerativeModel({
+         model: "gemini-pro",
+         generationConfig,
+       });
+       // const prompt = "Write a story about a magic backpack."
+       const result = await model.generateContent(prompt);
+       const response = await result.response;
+       const text = response.text();
+       res.status(200).send({ text });
+      //  questions = formatQuestions(text);
+
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ error });
+      }
+    // }while(!isCorrect(questions));
 });
 
 app.listen(5000, () =>

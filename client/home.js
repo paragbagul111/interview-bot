@@ -46,13 +46,13 @@ function loader(element) {
 
 async function generateQue() {
   loader(loding);
-  const response = await fetch("https://interview-bot.onrender.com", {
+  const response = await fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      prompt: `Generate 3 Proffesional Interview Questions For ${professionvalue}`,
+      prompt: `Only Generate 3 Proffesional Interview Questions For ${professionvalue}.Without Separating Space`,
       token : 3000,
     }),
   });
@@ -61,7 +61,9 @@ async function generateQue() {
   loding.innerHTML = "";
   if (response.ok) {
     const data = await response.json();
-    const parsedData = data.bot.trim();
+    console.log("data \n");
+    console.log(data);
+    const parsedData = data.text.trim();
     questions = parsedData.split("\n");
     console.log("questions");
     console.log(questions);
@@ -101,7 +103,7 @@ nextButton.addEventListener("click", (e) => {
 async function getRemarks() {
   for (let i = 0; i < questions.length; i++) {
     loader(loding);
-    const response = await fetch("https://interview-bot.onrender.com", {
+    const response = await fetch("http://localhost:5000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +115,7 @@ async function getRemarks() {
     });
     if (response.ok) {
       const data = await response.json();
-      const parsedData = data.bot.trim();
+      const parsedData = data.text.trim();
       remarks[i] = parsedData.replace(/[\n\W]/g, " ");
     } else {
       const err = await response.text();
@@ -132,7 +134,7 @@ async function getRemarks() {
 async function getOptimise() {
   for (let i = 0; i < questions.length; i++) {
     loader(loding);
-    const response = await fetch("https://interview-bot.onrender.com", {
+    const response = await fetch("http://localhost:5000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -145,7 +147,7 @@ async function getOptimise() {
 
     if (response.ok) {
       const data = await response.json();
-      const parsedData = data.bot.trim();
+      const parsedData = data.text.trim();
       optimise_ans[i] = parsedData.replace(/[\n\W]/g, " ");
     } 
     else {

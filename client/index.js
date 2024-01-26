@@ -25,6 +25,7 @@ function validateAndNavigate() {
 
 const submitbutton = document.getElementById("submit");
 submitbutton.addEventListener("click", (e) => {
+  console.log("Submit Button Clicked...");
   e.preventDefault();
   validateAndNavigate();
 });
